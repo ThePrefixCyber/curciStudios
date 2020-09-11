@@ -3,18 +3,21 @@ var mossModal = document.getElementById("mossModal");
 var nevelsonModal = document.getElementById("nevelsonModel");
 var pModal = document.getElementById("pModal");
 var dModal = document.getElementById("dModal");
+var medModal = document.getElementById("medModal");
 
 var mBtn = document.getElementById("mBtn");
 var mossBtn = document.getElementById("mossBtn");
 var nevelsonBtn = document.getElementById("nevelsonBtn");
 var pBtn = document.getElementById("pBtn");
 var dBtn = document.getElementById("dBtn");
+var medBtn = document.getElementById("medBtn");
 
 var mSpan = document.getElementsByClassName("close m")[0];
 var mossSpan = document.getElementsByClassName("close moss")[0];
 var nevelsonSpan = document.getElementsByClassName("close nevelson")[0];
 var pSpan = document.getElementsByClassName("close p")[0];
 var dSpan = document.getElementsByClassName("close d")[0];
+var medSpan = document.getElementsByClassName("close med")[0];
 
 
 mBtn.onclick = function() {
@@ -31,6 +34,9 @@ pBtn.onclick = function() {
 };
 dBtn.onclick = function() {
   dModal.style.display = "block";
+}
+medBtn.onclick = function () {
+  medModal.style.display = "block";
 }
 
 
@@ -49,6 +55,9 @@ pSpan.onclick = function() {
 dSpan.onclick = function() {
   dModal.style.display = "none";
 };
+medSpan.onclick = function () {
+  medModal.style.display = "none";
+}
 
 
 window.onclick = function(event) {
@@ -62,5 +71,7 @@ window.onclick = function(event) {
     pModal.style.display = "none";
   } else if (event.target === mossModal) {
     mossModal.style.display = "none";
+  } else if (event.target === medModal) {
+    medModal.style.display = "none";
   }
 };

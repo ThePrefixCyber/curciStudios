@@ -72,7 +72,7 @@ body {
   display: none;
 }
 
-@media (min-width: 1000px) {
+@media (min-width: 1200px) {
   .hamburger {
     display: none;
   }
@@ -602,10 +602,10 @@ ul {
 /*---------------------------------------------------------------------------------------*/
 
 .carousel-item {
-  object-fit: contain;
   height: 90vh;
   text-align: center;
-  overflow-y: scroll;
+  overflow: -moz-scrollbars-none;
+  overflow: hidden;
   z-index: 5;
 
   -ms-overflow-style: none;
@@ -680,27 +680,35 @@ ul {
 }
 
 .indButtonLeft {
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
   background: rgba(255,255,255,0);
   color: #343a40;
   cursor: pointer;
   text-align: center;
+  text-decoration: none !important;
   text-shadow: 0 0 1rem white, 0 0 1rem white, 0 0 2rem white !important;
   font-size: 5rem;
-  width: 4rem;
-  height: 4rem;
+  width: 10rem;
+  max-width: 30%;
+  height: 100%;
   position: absolute;
-  top: 40%;
-  left: 5%;
-  -webkit-transform: translate(-0%, -50%);
-  -ms-transform: translate(-0%, -50%);
-  transform: translate(-0%, -50%);
+  top: 0;
+  left: 0;
   transition: all .25s;
   z-index: 10;
 }
 
+.indButtonLeft:hover {
+  background: linear-gradient(to left, rgba(0,0,0,0), rgba(0,0,0,.6));
+  text-shadow: none !important;
+}
 
 .indButtonLeft span {
   cursor: pointer;
+  text-decoration: none !important;
   display: inline-block;
   position: relative;
   transition: 0.25s;
@@ -718,36 +726,44 @@ ul {
 
 .indButtonLeft:hover span {
   padding-right: 2rem;
-  color: #a9bafc;
+  /*color: #a9bafc;*/
+  color: white;
 }
 
 .indButtonLeft:hover span:after {
   opacity: 1;
-  right: 0;
+  right: 3rem;
 }
 
 .indButtonRight {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
   background: rgba(255,255,255,0);
   color: #343a40;
   cursor: pointer;
   text-align: center;
+  text-decoration: none !important;
   text-shadow: 0 0 1rem white, 0 0 1rem white, 0 0 2rem white !important;
   font-size: 5rem;
-  width: 4rem;
-  height: 4rem;
+  width: 10rem;
+  max-width: 30%;
+  height: 100%;
   position: absolute;
-  top: 40%;
-  right: 5%;
-  -webkit-transform: translate(0%, -50%);
-  -ms-transform: translate(0%, -50%);
-  transform: translate(0%, -50%);
+  top: 0;
+  right: 0;
   transition: all .25s;
   z-index: 10;
 }
 
+.indButtonRight:hover {
+  background: linear-gradient(to right, rgba(0, 0, 0, 0), rgba(0, 0, 0, .6));
+  text-shadow: none !important;
+}
 
 .indButtonRight span {
   cursor: pointer;
+  text-decoration: none !important;
   display: inline-block;
   position: relative;
   transition: 0.25s;
@@ -765,12 +781,12 @@ ul {
 
 .indButtonRight:hover span {
   padding-left: 2rem;
-  color: #a9bafc;
+  color: white;
 }
 
 .indButtonRight:hover span:before {
   opacity: 1;
-  left: 0;
+  left: 3rem;
 }
 
 
@@ -870,9 +886,8 @@ ul {
 .overlayContent {
   display: none;
   /*
-  color: #1d2124;
-  font-size: 20px;
   position: absolute;
+  font-size: 20px;
   top: 25%;
   left: 50%;
   height: fit-content;
@@ -894,6 +909,7 @@ ul {
 
 .blurbText {
   position: absolute;
+  color: #1b1e21;
   top: 10%;
   left: 50%;
   -webkit-transform: translate(-50%, -0%);
@@ -929,6 +945,25 @@ ul {
   width: 3rem;
 }
 
+.contentOut {
+  display: flex;
+  font-size: 20px;
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  top: 0;
+  left: 0;
+  padding-top: 20%;
+  background: rgba(0,0,0,.7);
+  color: white;
+  text-align: center;
+  overflow-y: scroll;
+  z-index: 3;
+
+  -ms-overflow-style: none;
+  overflow: -moz-scrollbars-none;
+  scrollbar-width: none;
+}
 
 .overlayButton {
   opacity: 0;
@@ -1005,7 +1040,7 @@ ul {
 .carousel-caption h3, .carousel-caption p {
   text-shadow: .2rem .2rem 1rem rgba(0, 0, 0, 1), -.2rem -.2rem 1rem rgba(0, 0, 0, 1) !important;
 }
-
+/*
 #toast {
   visibility: hidden;
   background-color: #333;
@@ -1022,6 +1057,7 @@ ul {
   -ms-transform: translate(-50%, -50%);
   transform: translate(-50%, -50%);
 }
+ */
 
 #info {
   display: none;
@@ -1038,12 +1074,13 @@ ul {
   -ms-transform: translate(-50%, -50%);
   transform: translate(-50%, -50%);
 }
-
+/*
 #toast.show {
   visibility: visible;
   -webkit-animation: fadein 0.5s, fadeout 0.5s 6.0s;
   animation: fadein 0.5s, fadeout 0.5s 6.0s;
 }
+ */
 @-webkit-keyframes fadein {
   from {bottom: 0; opacity: 0;}
   to {bottom: 5%; opacity: 1;}

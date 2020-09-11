@@ -5,7 +5,7 @@ function hasClass(element, className) {
 Array.from(document.getElementsByClassName("carousel-item")).forEach(
     function (element, index, array) {
       element.addEventListener('mouseover', function (e) {
-        if (!element.classList.contains('cim')) {
+        if (!element.classList.contains('cim') && window.innerWidth >= 766) {
           var row = element.parentNode.parentNode.parentNode.parentNode;
           var blurbText = row.querySelector('.blurbText');
           var slideInfo = element.querySelector(".overlayContent");
@@ -20,10 +20,16 @@ Array.from(document.getElementsByClassName("carousel-item")).forEach(
           if (row.classList.contains('right')) {
             overlay.classList.add('blurbOverlayLeftOut');
             overlay.classList.remove('blurbOverlayLeft');
+            overlay.classList.remove('contentOut');
           } else {
             overlay.classList.add('blurbOverlayRightOut');
             overlay.classList.remove('blurbOverlayRight');
+            overlay.classList.remove('contentOut');
           }
+        } else {
+          var overlayContent = element.querySelector(".overlayContent");
+          overlayContent.classList.add('contentOut');
+          overlayContent.style.display = 'block';
         }
         var button = element.querySelector('.overlayButton');
         if (button) {
@@ -44,7 +50,7 @@ Array.from(document.getElementsByClassName("carousel-item")).forEach(
 
       }, false);
       element.addEventListener('mouseout', function () {
-        if (!element.classList.contains('cim')) {
+        if (!element.classList.contains('cim') && window.innerWidth >= 766) {
           var row = element.parentNode.parentNode.parentNode.parentNode;
           if (row.classList.contains('right')) {
             var overlayL = row.querySelector('.blurbOverlayLeftOut');
@@ -55,6 +61,10 @@ Array.from(document.getElementsByClassName("carousel-item")).forEach(
             overlayR.classList.add('blurbOverlayRight');
             overlayR.classList.remove('blurbOverlayRightOut');
           }
+        } else {
+          var overlayContent = element.querySelector(".overlayContent");
+          overlayContent.classList.remove('contentOut');
+          overlayContent.style.display = 'none';
         }
         var button = element.querySelector('.overlayButtonOut');
         if (button) {
