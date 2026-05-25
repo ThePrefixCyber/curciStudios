@@ -653,7 +653,9 @@ ul {
   border-top: 0;
   border-bottom: 0;
   position: relative;
-  height: 10px;
+  height: 8px;
+  width: 24px;
+  border-radius: 999px;
 }
 
 .carousel-indicators .active {
