@@ -5,7 +5,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Curci Studio</title>
     <link href="https://fonts.googleapis.com/css2?family=Maven+Pro&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="bootstrap-4.1.3-dist/css/bootstrap.css">
+    <link rel="stylesheet"
+          href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css"
+          integrity="sha384-xOolHFLEh07PJGoPkLv1IbcEPTNtaed2xpHsD9ESMhqIYd0nLMwNLD69Npy4HI+N"
+          crossorigin="anonymous">
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="css/fixed.css">
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons"
@@ -147,7 +150,7 @@
                                onclick="moveTo('restoration');mountsClick();">Tebesca Jaguar</a>
                             <a href="#restoration" data-target="#mtcarousel-with-lb" data-slide-to="4"
                                onclick="moveTo('restoration');mountsClick();">Right Wale</a>
-                            <a href="#restoration" data-target="#mtcarousel-with-lb" data-slide-to="4"
+                            <a href="#restoration" data-target="#mtcarousel-with-lb" data-slide-to="5"
                                onclick="moveTo('restoration');mountsClick();">World Tree</a>
                         </div>
                     </div>
@@ -268,13 +271,6 @@
             <a class="btn btn-outline-light btn-lg" href="#contact">Contact</a>
         </div>
     </div>
-    <!---
-    <div id="toast">
-        Only artworks indicated as "Collection of the Artist" are
-        available for sale.
-        <br>We would be happy to create an original work for you on a special order basis.
-    </div>
-    --->
 
     <div id="info">
         We primarily design and create artworks for clients on a commissioned basis. Artworks
@@ -323,7 +319,7 @@
         <div class="col-md-8 order-last">
             <!-- Carousel Wrapper -->
             <div id="scarousel-with-lb" class="carousel slide carousel-multi-item lazy-load swipeAble"
-                 data-touch data-ride="carousel">
+                 data-touch="true" data-ride="carousel">
 
 
                 <a class="indButtonLeft" href="#scarousel-with-lb" data-slide="prev">
@@ -2269,7 +2265,8 @@
                         <br><strong>gc@gregorycurci.com</strong>
                         <br><br><a class="hvr-grow"
                                    href="https://www.google.com/maps/search/?api=1&query=20+Madison+Ave%2C+Winthrop%2C+MA+02152"
-                                   target="_blank">
+                                   target="_blank"
+                                   rel="noopener noreferrer">
                             <strong><i class="material-icons">map</i></strong>
                         </a>
                         <br><strong>20 Madison Ave, Winthrop Massachusetts 02152</strong>
@@ -3208,7 +3205,7 @@
                 <!--/.5th slide-->
 
                 <!--6th slide-->
-                <div class="med5 carousel-item text-center cim">
+                <div class="med6 carousel-item text-center cim">
                     <figure class="o col-md-12 d-md-inline-block">
 
                         <img data-src="img/MedunaAdditional.jpg"
@@ -3236,8 +3233,12 @@
 
 
 
-<script src="js/jquery-3.3.1.min.js"></script>
-<script src="bootstrap-4.1.3-dist/js/bootstrap.min.js"></script>
+<script src="https://code.jquery.com/jquery-3.7.1.min.js"
+        integrity="sha384-1H217gwSVyLSIfaLxHbE7dRb3v4mYCKbpQvzx0cegeju1MVsGrX5xXxAvs/HgeFs"
+        crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-Fy6S3B9q64WdZWQUiU+q4/2Lc9npb8tCaSX9FK7E8HnRr0Jz8D6OP9dO5Vg3Q9ct"
+        crossorigin="anonymous"></script>
 <script src="js/modernizr-custom.js"></script>
 
 <script src="js/petals.js"></script>

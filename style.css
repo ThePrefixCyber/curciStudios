@@ -644,12 +644,16 @@ ul {
 .carousel-indicators {
   position: absolute;
   top: 0;
-  z-index: 5;
+  z-index: 15;
   height: fit-content;
 }
 
 .carousel-indicators li {
   background-color: black;
+  border-top: 0;
+  border-bottom: 0;
+  position: relative;
+  height: 10px;
 }
 
 .carousel-indicators .active {
